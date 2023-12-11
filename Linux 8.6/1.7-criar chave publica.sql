@@ -50,4 +50,4 @@ sudo ufw deny from 3.133.113.50
 /*
 ver regras ufw
 */
-sudo ufw status numbered
+sudo ufw status numberedipconfig
