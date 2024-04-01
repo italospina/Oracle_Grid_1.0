@@ -1,0 +1,1 @@
+export CV_ASSUME_DISTID=OEL8.1

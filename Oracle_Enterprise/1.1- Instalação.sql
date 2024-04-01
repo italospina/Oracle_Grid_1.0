@@ -100,3 +100,28 @@ export CV_ASSUME_DISTID='OL7'
 SQL> alter system set processes=900 scope=spfile;
 
 System altered.
+
+/*
+=================================================================
+========= Passo 6. Instalar o Enterprise Manager ================
+=================================================================
+*/
+--tirar variaveis de ambiente
+unset ORACLE_HOME
+unset ORACLE_SID
+
+--criar diretorio
+mkdir -p /u01/app/oracle/product/19.0.0/EM135c/bipublisher/config
+mkdir -p /u01/app/oracle/product/19.0.0/EM135c/bipublisher/cluster
+mkdir -p /u01/app/oracle/product/19.0.0/EM135c/middleware
+mkdir -p /u01/app/oracle/agent
+mkdir -p /u01/app/oracle/software
+
+--executar
+cd mkdir -p /u01/app/oracle/agent
+export CV_ASSUME_DISTID='OL7'
+unset ORACLE_HOME
+unset ORACLE_SID
+./em13300_linux64.bin
+
+
